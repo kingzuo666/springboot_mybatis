@@ -1,0 +1,25 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>hello</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<div style="width: 500px; margin: 20px auto; text-align: center">
+		<table align='center' border='1' cellspacing='0'>
+			<tr>
+				<td>index</td>
+				<td>买家会员名</td>
+				<td>等级</td>
+				<td>处理时间</td>
+			</tr>
+			<tr th:each="c,status:${cs}">
+				<td th:text="${status.index}"></td>
+				<td th:text="${c.mjhym}"></td>
+				<td th:text="${c.rank}"></td>
+				<td th:text="${c.time}"></td>
+			</tr>
+		</table>
+	</div>
+</body>
+</html>
